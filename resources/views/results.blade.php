@@ -20,6 +20,7 @@
   </div>
 </div>    
 @endforeach
+{{$voters->links()}}
 
 </div>
 

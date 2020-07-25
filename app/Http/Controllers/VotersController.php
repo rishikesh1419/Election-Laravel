@@ -21,7 +21,7 @@ class VotersController extends Controller
             'pincode' => 'required|regex:/[0-9]{6}/'
         ]);
 
-        $voters = Voter::where([['gname','=',$request->get('gname')],['mname','=',$request->get('mname')],['lname','=',$request->get('lname')],['pincode','=',$request->get('pincode')]])->paginate(1);
+        $voters = Voter::where([['gname','=',$request->get('gname')],['mname','=',$request->get('mname')],['lname','=',$request->get('lname')],['pincode','=',$request->get('pincode')]])->paginate(2);
         
         if(count($voters) > 0) {
             for($i=0; $i < count($voters); $i++) {
