@@ -44,9 +44,9 @@ class VotersController extends Controller
             'lname' => 'required|max:50',
             'fname' => 'required|max:100',
             'address1' => 'required|max:150',
-            'aadhaar' => 'required|regex:/[0-9]{12}/',
+            'aadhaar' => 'required|max:12|regex:/[0-9]{12}/',
             'dob' => 'required',
-            'pincode' => 'required|regex:/[0-9]{6}/',
+            'pincode' => 'required|max:6|regex:/[0-9]{6}/',
             'photo' => 'required|max:200'
         ]);
 
