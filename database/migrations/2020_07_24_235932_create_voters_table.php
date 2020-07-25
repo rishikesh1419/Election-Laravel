@@ -4,6 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+use DB;
+
 class CreateVotersTable extends Migration
 {
     /**
@@ -23,8 +25,8 @@ class CreateVotersTable extends Migration
             $table->string('address1', 150)->nullable(false);
             $table->string('pincode', 6)->nullable(false);
             $table->date('dob')->nullable(false);
-            $table->binary('photo')->nullable(false);
         });
+        DB::statement("ALTER TABLE voters ADD photo MEDIUMBLOB NOT NULL");
     }
 
     /**
