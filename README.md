@@ -19,4 +19,4 @@ Hosted: [http://election-commission-voters.herokuapp.com/](http://election-commi
 ![images/download.JPG](images/download.JPG)
 
 #### Voter ID PDF
-![images/PDF.JPG](images/PDF.JPG)
+![images/pdf.JPG](images/pdf.JPG)
