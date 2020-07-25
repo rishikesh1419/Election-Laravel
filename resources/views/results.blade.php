@@ -12,9 +12,9 @@
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">{{ $voter->gname." ".$voter->mname." ".$voter->lname }} <a href="{{ action('VotersController@getId', $voter->id)}}" class="btn btn-primary" style="float: right;">Get ID</a></h5>
-        <p class="card-text">Aadhaar No. {{ $voter->aadhaar }} <br/> Date of Birth: {{ $voter->dob }} <br/>Husband/Father: {{ $voter->fname }}</p>
-        <p class="card-text">Address: {{ $voter->address1 . ", " . $voter->pincode }}</p>
+        <h5 class="card-title">{{ ucwords( $voter->gname." ".$voter->mname." ".$voter->lname ) }} <a href="{{ action('VotersController@getId', $voter->id)}}" class="btn btn-primary" style="float: right;">Get ID</a></h5>
+        <p class="card-text">Aadhaar No. {{ $voter->aadhaar }} <br/> Date of Birth: {{ $voter->dob }} <br/>Husband/Father: {{ ucwords( $voter->fname) }}</p>
+        <p class="card-text">Address: {{ ucwords( $voter->address1 . ", " . $voter->pincode ) }}</p>
       </div>
     </div>
   </div>

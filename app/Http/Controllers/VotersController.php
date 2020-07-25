@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Voter;
 use finfo;
+use PDF;
 
 class VotersController extends Controller
 {
@@ -71,6 +72,6 @@ class VotersController extends Controller
     public function getId($id) {
         $voter = Voter::find($id);
         $pdf = PDF::loadView('id', compact('voter'));
-        return $pdf->download($id.'.pdf');
+        return $pdf->download('voter.pdf');
     }
 }
