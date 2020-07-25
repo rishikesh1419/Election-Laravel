@@ -70,15 +70,7 @@ class VotersController extends Controller
 
     public function getId($id) {
         $voter = Voter::find($id);
-        $pdf = PDF::loadView('pdf', compact('show'));
+        $pdf = PDF::loadView('id', compact('voter'));
         return $pdf->download($id.'.pdf');
     }
-
-    // public function results(Request $request) {
-    //     $this->validate($request, [
-    //         'gname' => "required"
-    //     ]);
-
-        // return json_encode($request->input('pincode'));
-    // }
 }
