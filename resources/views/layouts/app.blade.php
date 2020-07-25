@@ -2,7 +2,7 @@
     <head>
 
     <title>{{config('app.name', 'Election Commission')}}</title>
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" href="/css/app.css">
     </head>
 
     <body>
